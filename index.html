@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Portfolio</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <title>Lucas X. C. | Portfolio</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.png">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
@@ -17,7 +17,8 @@
         </div>
       </div>
 
-      <!-- <div id="unity-warning"> </div>
+       <div id="unity-warning"> </div>
+      <!--
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
@@ -40,16 +41,16 @@
       // user.
       function unityShowBanner(msg, type) {
         function updateBannerVisibility() {
-          // warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
         }
         var div = document.createElement('div');
         div.innerHTML = msg;
-        // warningBanner.appendChild(div);
+        warningBanner.appendChild(div);
         if (type == 'error') div.style = 'background: red; padding: 10px;';
         else {
           if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
           setTimeout(function() {
-            // warningBanner.removeChild(div);
+            warningBanner.removeChild(div);
             updateBannerVisibility();
           }, 5000);
         }
@@ -81,7 +82,7 @@
         // Avoid draining fillrate performance on mobile devices,
         // and default/override low DPI mode on mobile browsers.
         config.devicePixelRatio = 1;
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
+        unityShowBanner('For better performance, please switch to landscape mode.');
       } else {
         canvas.style.width = "100%";
         canvas.style.height = "100%";
